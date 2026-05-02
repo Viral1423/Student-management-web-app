@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+</head>
+
+<style>
+body {
+    background-color: #0D0D0D;
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+
+form {
+    margin: 50px auto;
+    padding: 20px;
+    width: 300px;
+    background: #111;
+    border-radius: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    width: 95%;
+    background-color: orange;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+<body>
+
+<h2>Edit Student</h2>
+
+<form action="/update/{{s[1]}}" method="POST">
+    <input type="text" name="name" value="{{s[0]}}" required><br>
+
+    <input type="number" name="pmarks" value="{{s[2]}}" required><br>
+
+    <input type="number" name="mmarks" value="{{s[3]}}" required><br>
+
+    <input type="number" name="smarks" value="{{s[4]}}" required><br>
+
+    <button type="submit">Update</button>
+</form>
+
+<br>
+<a href="/student" style="color:aqua;">⬅ Back</a>
+
+</body>
+</html>

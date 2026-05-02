@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager</title>
+</head>
+<style>
+body {
+    background-color: #0D0D0D;
+    font-family: Arial;
+    color: antiquewhite;
+}
+
+/* Center everything vertically + horizontally */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Forms */
+form {
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #111;
+}
+
+/* Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    width: 95%;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add {
+    background-color: #7CFC00;
+    color: black;
+}
+
+.del {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* Link */
+.link {
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+    font-weight: bold;
+}
+</style>
+<body>
+    <h1>Welcome</h1>
+    <form action="/add" method="POST">
+        <input type="text" name="name" placeholder="Enter Your Name.."><br><br>
+        <input type="number" name="roll" placeholder="Enter Your Roll N0..."><br><br>
+        <input type="number" name="pmarks" placeholder="Enter Your marks in Physics..."><br><br>
+        <input type="number" name="mmarks" placeholder="Enter Your marks in Maths..."><br><br>
+        <input type="number" name="smarks" placeholder="Enter Your marks in Stats..."><br><br>
+        <button class="add" type="submit">Add Data</button>
+    </form>
+
+    <h1>Delete Data</h1>
+    <form action="/del" method="POST">
+        <input type="number" name="roll" placeholder="Enter Roll no. TO Delete Data..."><br><br>
+
+        <button class="del" type="submit">Delete</button>
+    </form>
+    <div class="link">
+
+        <a href="/student">View All Student List</a>
+    </div>
+</body>
+</html>
