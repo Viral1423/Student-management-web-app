@@ -83,9 +83,9 @@ a {
     <form action="/add" method="POST">
         <input type="text" name="name" placeholder="Enter Your Name.."><br><br>
         <input type="number" name="roll" placeholder="Enter Your Roll N0..."><br><br>
-        <input type="number" name="pmarks" placeholder="Enter Your marks in Physics..."><br><br>
-        <input type="number" name="mmarks" placeholder="Enter Your marks in Maths..."><br><br>
-        <input type="number" name="smarks" placeholder="Enter Your marks in Stats..."><br><br>
+        <input type="number" name="pmarks" placeholder="Enter Your marks in Physics..." min="0" max="100" required><br><br>
+        <input type="number" name="mmarks" placeholder="Enter Your marks in Maths..." min="0" max="100" required><br><br>
+        <input type="number" name="smarks" placeholder="Enter Your marks in Stats..." min="0" max="100" required><br><br>
         <button class="add" type="submit">Add Data</button>
     </form>
 
